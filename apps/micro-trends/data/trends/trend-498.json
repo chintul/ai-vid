@@ -1,0 +1,18 @@
+{
+  "id": "498",
+  "name": "Plant-Based Movement Trend #498",
+  "category": "Food",
+  "description": "Emerging food trend showing 96% growth. Plant-Based Movement represents significant shift in market dynamics.",
+  "growthRate": 96,
+  "searchVolume": 44455,
+  "trendScore": 82,
+  "dateIdentified": "2024-01-15",
+  "region": "Global",
+  "keywords": ["plant-based movement", "food", "trending", "emerging"],
+  "sources": ["Google Trends", "Market Research", "Social Media Analytics"],
+  "metrics": {
+    "momentum": "63",
+    "competition": "59",
+    "opportunity": "86"
+  }
+}

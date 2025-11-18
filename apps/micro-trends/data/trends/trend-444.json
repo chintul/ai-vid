@@ -1,0 +1,18 @@
+{
+  "id": "444",
+  "name": "Digital Payments Trend #444",
+  "category": "Finance",
+  "description": "Emerging finance trend showing 97% growth. Digital Payments represents significant shift in market dynamics.",
+  "growthRate": 97,
+  "searchVolume": 32610,
+  "trendScore": 87,
+  "dateIdentified": "2024-01-15",
+  "region": "Global",
+  "keywords": ["digital payments", "finance", "trending", "emerging"],
+  "sources": ["Google Trends", "Market Research", "Social Media Analytics"],
+  "metrics": {
+    "momentum": "61",
+    "competition": "69",
+    "opportunity": "86"
+  }
+}

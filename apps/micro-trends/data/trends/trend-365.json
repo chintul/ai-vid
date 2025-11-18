@@ -1,0 +1,18 @@
+{
+  "id": "365",
+  "name": "Interactive Media Trend #365",
+  "category": "Entertainment",
+  "description": "Emerging entertainment trend showing 92% growth. Interactive Media represents significant shift in market dynamics.",
+  "growthRate": 92,
+  "searchVolume": 42461,
+  "trendScore": 78,
+  "dateIdentified": "2024-01-15",
+  "region": "Global",
+  "keywords": ["interactive media", "entertainment", "trending", "emerging"],
+  "sources": ["Google Trends", "Market Research", "Social Media Analytics"],
+  "metrics": {
+    "momentum": "94",
+    "competition": "57",
+    "opportunity": "79"
+  }
+}

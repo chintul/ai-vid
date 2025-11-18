@@ -1,0 +1,18 @@
+{
+  "id": "385",
+  "name": "Eco Tourism Trend #385",
+  "category": "Travel",
+  "description": "Emerging travel trend showing 85% growth. Eco Tourism represents significant shift in market dynamics.",
+  "growthRate": 85,
+  "searchVolume": 45619,
+  "trendScore": 84,
+  "dateIdentified": "2024-01-15",
+  "region": "Global",
+  "keywords": ["eco tourism", "travel", "trending", "emerging"],
+  "sources": ["Google Trends", "Market Research", "Social Media Analytics"],
+  "metrics": {
+    "momentum": "63",
+    "competition": "69",
+    "opportunity": "75"
+  }
+}

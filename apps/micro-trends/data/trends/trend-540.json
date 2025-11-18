@@ -1,0 +1,18 @@
+{
+  "id": "540",
+  "name": "Social Commerce Trend #540",
+  "category": "E-commerce",
+  "description": "Emerging e-commerce trend showing 97% growth. Social Commerce represents significant shift in market dynamics.",
+  "growthRate": 97,
+  "searchVolume": 29880,
+  "trendScore": 90,
+  "dateIdentified": "2024-01-15",
+  "region": "Global",
+  "keywords": ["social commerce", "e-commerce", "trending", "emerging"],
+  "sources": ["Google Trends", "Market Research", "Social Media Analytics"],
+  "metrics": {
+    "momentum": "64",
+    "competition": "47",
+    "opportunity": "85"
+  }
+}

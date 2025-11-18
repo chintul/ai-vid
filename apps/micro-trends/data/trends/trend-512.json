@@ -1,0 +1,18 @@
+{
+  "id": "512",
+  "name": "Sustainable Style Trend #512",
+  "category": "Fashion",
+  "description": "Emerging fashion trend showing 83% growth. Sustainable Style represents significant shift in market dynamics.",
+  "growthRate": 83,
+  "searchVolume": 20976,
+  "trendScore": 75,
+  "dateIdentified": "2024-01-15",
+  "region": "Global",
+  "keywords": ["sustainable style", "fashion", "trending", "emerging"],
+  "sources": ["Google Trends", "Market Research", "Social Media Analytics"],
+  "metrics": {
+    "momentum": "90",
+    "competition": "61",
+    "opportunity": "86"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "373",
+  "name": "Clean Beauty Trend #373",
+  "category": "Beauty",
+  "description": "Emerging beauty trend showing 97% growth. Clean Beauty represents significant shift in market dynamics.",
+  "growthRate": 97,
+  "searchVolume": 34578,
+  "trendScore": 95,
+  "dateIdentified": "2024-01-15",
+  "region": "Global",
+  "keywords": ["clean beauty", "beauty", "trending", "emerging"],
+  "sources": ["Google Trends", "Market Research", "Social Media Analytics"],
+  "metrics": {
+    "momentum": "73",
+    "competition": "38",
+    "opportunity": "75"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "424",
+  "name": "Mental Fitness Trend #424",
+  "category": "Health",
+  "description": "Emerging health trend showing 97% growth. Mental Fitness represents significant shift in market dynamics.",
+  "growthRate": 97,
+  "searchVolume": 40782,
+  "trendScore": 81,
+  "dateIdentified": "2024-01-15",
+  "region": "Global",
+  "keywords": ["mental fitness", "health", "trending", "emerging"],
+  "sources": ["Google Trends", "Market Research", "Social Media Analytics"],
+  "metrics": {
+    "momentum": "68",
+    "competition": "56",
+    "opportunity": "80"
+  }
+}

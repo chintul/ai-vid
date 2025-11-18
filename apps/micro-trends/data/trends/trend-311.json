@@ -1,0 +1,18 @@
+{
+  "id": "311",
+  "name": "Online Learning Trend #311",
+  "category": "Education",
+  "description": "Emerging education trend showing 94% growth. Online Learning represents significant shift in market dynamics.",
+  "growthRate": 94,
+  "searchVolume": 51235,
+  "trendScore": 98,
+  "dateIdentified": "2024-01-15",
+  "region": "Global",
+  "keywords": ["online learning", "education", "trending", "emerging"],
+  "sources": ["Google Trends", "Market Research", "Social Media Analytics"],
+  "metrics": {
+    "momentum": "99",
+    "competition": "79",
+    "opportunity": "87"
+  }
+}

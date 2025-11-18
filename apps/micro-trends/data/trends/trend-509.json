@@ -1,0 +1,18 @@
+{
+  "id": "509",
+  "name": "Smart Homes Trend #509",
+  "category": "Real Estate",
+  "description": "Emerging real estate trend showing 82% growth. Smart Homes represents significant shift in market dynamics.",
+  "growthRate": 82,
+  "searchVolume": 47850,
+  "trendScore": 98,
+  "dateIdentified": "2024-01-15",
+  "region": "Global",
+  "keywords": ["smart homes", "real estate", "trending", "emerging"],
+  "sources": ["Google Trends", "Market Research", "Social Media Analytics"],
+  "metrics": {
+    "momentum": "92",
+    "competition": "45",
+    "opportunity": "74"
+  }
+}
