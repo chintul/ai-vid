@@ -1,0 +1,461 @@
+---
+title: "Email Not Sending or Receiving: Fix Mail Server and Connection Issues"
+description: "Email stopped working? Can't send or receive messages? Learn how to fix common email problems with Outlook, Gmail, iPhone, and other mail clients."
+category: "Tech & Productivity"
+keywords: ["email not sending", "email not receiving", "fix email", "mail server problems"]
+lastUpdated: "2024-01-20"
+---
+
+# Email Not Sending or Receiving: Fix Mail Server and Connection Issues
+
+Email that suddenly stops sending or receiving disrupts work and communication. Common causes include internet connectivity issues, incorrect server settings, full mailbox storage, password/authentication failures, or email client configuration problems. The type of failure—can't send, can't receive, or both—combined with error messages provides diagnostic clues. Most email problems are fixable through systematic troubleshooting of connection, authentication, and settings without requiring technical support.
+
+## Quick Diagnosis
+
+**Determine your specific problem:**
+
+**Can't send emails:**
+- Messages stuck in outbox
+- Error messages when sending
+- SMTP server errors
+- Mailbox full notification received
+
+**Can't receive emails:**
+- No new messages arriving
+- POP3/IMAP errors
+- Inbox appears frozen
+- Messages delayed significantly
+
+**Can't send or receive:**
+- Complete email failure
+- Connection errors
+- Authentication failures
+- Recently changed password
+
+**Works on one device but not another:**
+- Device-specific configuration issue
+- Not syncing properly across devices
+
+This guides your troubleshooting approach.
+
+## Check Internet Connection First
+
+**No email works without internet:**
+
+**Test connection:**
+1. Open web browser
+2. Visit google.com or another website
+3. If website doesn't load: Internet connection problem
+4. Fix internet before troubleshooting email
+5. Restart router if needed
+6. Check WiFi connection on device
+
+**Email requires stable connection:**
+- Can't send/receive on cellular data? Check data plan active
+- Works on WiFi but not cellular? Check cellular data settings
+- Intermittent connection causes email delays
+
+## Common Solutions for All Email Problems
+
+### Solution 1: Restart Email Client and Device
+
+**Clears temporary glitches:**
+
+**For computers:**
+1. Close email program completely (Outlook, Mail, etc.)
+2. Wait 30 seconds
+3. Reopen email program
+4. Check if problem resolved
+5. If not: Restart computer and try again
+
+**For phones/tablets:**
+1. Close Mail app completely (swipe away from recent apps)
+2. Wait 30 seconds
+3. Reopen Mail app
+4. Check for new messages
+5. If not working: Restart device
+
+**Why it helps:** Restarting clears cached data and reestablishes server connections.
+
+### Solution 2: Check Email Storage Quota
+
+**Full mailbox prevents new email:**
+
+**Check storage:**
+
+**Gmail:**
+1. Visit gmail.com
+2. Scroll to bottom of page
+3. Check storage used (15GB free for personal accounts)
+4. If over 85% full: Delete emails or purchase more storage
+
+**Outlook.com:**
+1. Check storage indicator in settings
+2. Free accounts: 15GB typically
+3. Delete old emails if near limit
+
+**Work email:**
+- Check with IT for quota
+- Typical limits: 2GB-50GB depending on organization
+
+**Freeing space:**
+1. Delete emails with large attachments
+2. Empty trash/deleted items folder
+3. Empty spam folder
+4. Archive old emails to local folders
+
+### Solution 3: Verify Email Password
+
+**Recent password change causes authentication failure:**
+
+**Common scenarios:**
+- Changed password on website but not in email client
+- Password expired (common in work environments)
+- Security update required new sign-in
+
+**Fix:**
+
+**On iPhone/iPad:**
+1. Settings → Mail → Accounts
+2. Tap your email account
+3. Tap Account
+4. Update password
+5. Save and test
+
+**On Android:**
+1. Settings → Accounts → your email
+2. Update password
+3. Sync and test
+
+**On Outlook (Windows):**
+1. File → Account Settings → Account Settings
+2. Select account → Change
+3. Update password
+4. Test Account Settings
+5. Next → Close
+
+**On Mac Mail:**
+1. Mail → Preferences → Accounts
+2. Select account
+3. Update password in Account Information
+4. Close and test
+
+### Solution 4: Check Server Settings
+
+**Incorrect settings prevent email function:**
+
+**Find correct settings:**
+- Google your email provider + "server settings"
+- Common providers have published settings
+- Contact email provider if unclear
+
+**Typical settings to verify:**
+
+**Gmail:**
+- Incoming (IMAP): imap.gmail.com, Port 993, SSL on
+- Outgoing (SMTP): smtp.gmail.com, Port 465 or 587, SSL/TLS on
+
+**Outlook.com/Hotmail:**
+- Incoming (IMAP): outlook.office365.com, Port 993, SSL on
+- Outgoing (SMTP): smtp-mail.outlook.com, Port 587, TLS on
+
+**Yahoo:**
+- Incoming (IMAP): imap.mail.yahoo.com, Port 993, SSL on
+- Outgoing (SMTP): smtp.mail.yahoo.com, Port 465 or 587, SSL on
+
+**Work email:**
+- Get settings from IT department
+- Often uses Exchange Server
+
+**Updating settings:**
+
+**Outlook:**
+1. File → Account Settings → Account Settings
+2. Select account → Change → More Settings
+3. Advanced tab: Verify incoming/outgoing ports
+4. Outgoing Server tab: Check "My outgoing server requires authentication"
+5. OK → Next → Close
+
+**iPhone:**
+1. Settings → Mail → Accounts → your account
+2. Account → Advanced
+3. Verify incoming port and SSL settings
+4. Back → SMTP → Primary Server
+5. Verify outgoing settings
+
+## Specific Issue Fixes
+
+### Can't Send Emails (Stuck in Outbox)
+
+**Common causes:**
+
+**1. SMTP server settings wrong**
+- Verify outgoing server settings as shown above
+- Ensure authentication enabled
+
+**2. Large attachment**
+- Most providers limit: 20-25MB
+- Compress or use file-sharing service for large files
+
+**3. Outbox corrupted**
+- Move stuck messages to drafts
+- Delete problematic message
+- Re-create and send
+
+**4. Antivirus blocking**
+- Temporarily disable antivirus
+- Test sending
+- If works: Adjust antivirus email scanning settings
+
+### Can't Receive Emails
+
+**Common causes:**
+
+**1. Inbox full (storage quota)**
+- Delete emails to free space
+- Empty trash
+
+**2. Email forwarding rule redirecting messages**
+- Check rules/filters in email settings
+- Disable or modify forwarding rules
+
+**3. Emails going to spam folder**
+- Check spam/junk folder
+- Mark legitimate emails as "Not Spam"
+- Add senders to contacts
+
+**4. POP3 vs IMAP settings**
+- POP3 downloads and often deletes from server
+- If accessing from multiple devices, use IMAP
+- Change account type may require re-adding account
+
+### Emails Delayed (Arrive Hours Later)
+
+**Causes:**
+
+**1. Server delays on sender or recipient side**
+- Usually temporary
+- Check email headers for delay source
+
+**2. Sync intervals too infrequent**
+- iPhone/Android: Change "Fetch" to "Push" or reduce fetch interval
+- Outlook: Decrease "Send/Receive" interval
+
+**3. Internet connection unstable**
+- Intermittent connection delays sync
+- Check WiFi stability
+
+### Specific Error Messages
+
+**"Cannot connect to server" or "Connection timed out":**
+1. Check internet connection
+2. Verify server settings
+3. Check firewall not blocking email ports
+4. Temporarily disable VPN and test
+
+**"Authentication failed" or "Invalid credentials":**
+1. Verify username (usually full email address)
+2. Update password
+3. Check for 2-factor authentication requirement
+4. Generate app-specific password if needed
+
+**"Mailbox unavailable" or "Relay access denied":**
+1. SMTP server authentication not enabled
+2. Using wrong outgoing server
+3. ISP blocking port 25 (use port 587 instead)
+
+**"Message too large":**
+1. Remove or compress attachments
+2. Use file sharing service for large files
+3. Some providers limit to 20-25MB
+
+## Provider-Specific Issues
+
+### Gmail Not Working
+
+**App-specific passwords:**
+
+If using 2-factor authentication:
+1. Visit myaccount.google.com/security
+2. 2-Step Verification → App Passwords
+3. Generate password for your email client
+4. Use generated password instead of regular password
+
+**Less secure app access:**
+- Google phasing this out
+- Must use modern authentication
+- Update to newer email client if very old
+
+**POP/IMAP disabled:**
+1. Visit gmail.com
+2. Settings → Forwarding and POP/IMAP
+3. Enable IMAP Access
+4. Save changes
+
+### Outlook/Office 365 Not Working
+
+**Modern authentication required:**
+1. Ensure Outlook version supports modern auth
+2. Update Outlook if old version
+3. May need to recreate account with modern auth
+
+**Exchange settings:**
+- Work accounts often use Exchange
+- Auto-discover usually configures automatically
+- Get Exchange server address from IT if manual setup needed
+
+### iPhone/iPad Mail Issues
+
+**Delete and re-add account:**
+
+Often most effective fix:
+1. Settings → Mail → Accounts
+2. Tap account → Delete Account
+3. Confirm deletion
+4. Add account again (Mail → Accounts → Add Account)
+5. Follow prompts to set up
+
+**iOS updates:**
+- Keep iOS updated
+- Email bugs often fixed in updates
+
+### Android Mail Issues
+
+**Check Google Play Services:**
+1. Ensure Google Play Services updated
+2. Clear cache: Settings → Apps → Google Play Services → Storage → Clear Cache
+3. Restart device
+
+**Gmail app vs native:**
+- Gmail app generally more reliable for Gmail accounts
+- Native Mail app works for other providers
+
+## Advanced Troubleshooting
+
+### Check Email on Webmail
+
+**Isolates problem:**
+
+1. Visit email provider's website (gmail.com, outlook.com, etc.)
+2. Sign in through web browser
+3. Check if email sends/receives on web
+
+**Results:**
+- Works on web but not in app: App configuration problem
+- Doesn't work on web either: Server-side or account issue
+- Different behavior: Helps identify where problem is
+
+### Test with Another Device
+
+**Device-specific vs. account-wide:**
+
+1. Try accessing email on different device
+2. Use web browser if no other device available
+
+**If works elsewhere:**
+- Problem is device-specific
+- Focus troubleshooting on that device's settings
+
+### Port and Firewall Testing
+
+**Firewall blocking email ports:**
+
+**Common email ports:**
+- IMAP: 993 (SSL), 143 (non-SSL)
+- POP3: 995 (SSL), 110 (non-SSL)
+- SMTP: 465 (SSL), 587 (TLS), 25 (often blocked)
+
+**Testing:**
+1. Temporarily disable firewall
+2. Test email
+3. If works: Adjust firewall to allow email ports
+4. Re-enable firewall with exceptions
+
+**Corporate networks:**
+- May block certain ports
+- Check with IT if email works at home but not work
+
+## Prevention and Maintenance
+
+**Keep email working:**
+
+**Regular maintenance:**
+- Delete old emails periodically
+- Keep well under storage quota
+- Empty trash regularly
+- Archive important emails
+
+**Security best practices:**
+- Use strong, unique password
+- Enable 2-factor authentication
+- Don't share password
+- Watch for phishing emails
+
+**Stay updated:**
+- Keep email client updated
+- Update device operating system
+- Review account settings after major updates
+
+**Backup important emails:**
+- Export to local storage
+- Use email client with local backup
+- Don't rely solely on cloud storage
+
+## When to Contact Support
+
+**DIY appropriate for:**
+- Settings adjustments
+- Password updates
+- Storage management
+- Basic troubleshooting
+
+**Contact provider support for:**
+- Server-side issues
+- Account locked or compromised
+- Persistent authentication failures
+- Emails bouncing back repeatedly
+- Suspected hacking or spam from your account
+
+**Contact IT for work email:**
+- Any issues with company email
+- Server settings
+- Storage quota increases
+- Mobile device setup
+
+## Frequently Asked Questions
+
+**Q: Why did my email suddenly stop working?**
+
+Most common: Password changed elsewhere and not updated in app, storage full, or internet connection issue. Also check for provider outages.
+
+**Q: How do I know if my email provider is down?**
+
+Check provider's status page or search "[provider name] down" on social media. Try accessing through web browser.
+
+**Q: Can I recover emails if I delete my account and re-add it?**
+
+IMAP: Yes, emails stay on server. POP3: No, emails may be deleted from server. Back up important emails first.
+
+**Q: Why do some emails arrive immediately but others are delayed?**
+
+Depends on sender's server, your provider's server load, spam filtering delays, and sync frequency in your email app.
+
+**Q: What's the difference between POP and IMAP?**
+
+POP downloads emails to device (often removes from server). IMAP syncs with server (accessible from multiple devices). Use IMAP for multiple devices.
+
+**Q: Can antivirus interfere with email?**
+
+Yes. Antivirus email scanning can block connections. Try disabling temporarily to test. If that's the cause, adjust antivirus settings.
+
+## Conclusion
+
+Email sending and receiving problems usually trace to internet connectivity, incorrect server settings, or authentication issues rather than serious technical failures. Start with simplest solutions: restart email client and device, verify internet connection, and confirm password is current.
+
+Storage quotas cause surprising numbers of email failures—check usage and delete unnecessary messages if approaching limits. Full mailboxes prevent new email receipt and can bounce messages back to senders.
+
+Server settings must match your email provider's specifications exactly. A single wrong port number or incorrect SSL setting prevents email function. Use provider-published settings and verify authentication is enabled for outgoing mail.
+
+For persistent issues, accessing email through web browser isolates whether the problem is account-wide or device/app-specific. If webmail works but apps don't, focus on app configuration. If webmail also fails, contact email provider support for account-level assistance.
+
+Regular maintenance—staying under storage quotas, keeping software updated, and using strong security practices—prevents most email problems before they occur.
