@@ -1,0 +1,22 @@
+{
+  "id": "115",
+  "name": "Micro Trend 115",
+  "category": "Travel",
+  "description": "Emerging Travel trend showing 93% growth in recent months",
+  "growthRate": 93,
+  "searchVolume": 9260,
+  "trendScore": 71,
+  "dateIdentified": "2024-01-25",
+  "region": "Global",
+  "keywords": ["travel", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "58",
+    "competition": "34",
+    "opportunity": "4"
+  }
+}

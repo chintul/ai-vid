@@ -1,0 +1,22 @@
+{
+  "id": "35",
+  "name": "Micro Trend 35",
+  "category": "Entertainment",
+  "description": "Emerging Entertainment trend showing 69% growth in recent months",
+  "growthRate": 69,
+  "searchVolume": 23244,
+  "trendScore": 88,
+  "dateIdentified": "2024-01-25",
+  "region": "Global",
+  "keywords": ["entertainment", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "43",
+    "competition": "4",
+    "opportunity": "89"
+  }
+}

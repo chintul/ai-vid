@@ -1,0 +1,22 @@
+{
+  "id": "172",
+  "name": "Micro Trend 172",
+  "category": "Social Media",
+  "description": "Emerging Social Media trend showing 170% growth in recent months",
+  "growthRate": 170,
+  "searchVolume": 15340,
+  "trendScore": 78,
+  "dateIdentified": "2024-01-22",
+  "region": "Global",
+  "keywords": ["social", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "69",
+    "competition": "6",
+    "opportunity": "34"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "151",
+  "name": "Micro Trend 151",
+  "category": "Technology",
+  "description": "Emerging Technology trend showing 160% growth in recent months",
+  "growthRate": 160,
+  "searchVolume": 31683,
+  "trendScore": 63,
+  "dateIdentified": "2024-01-21",
+  "region": "Global",
+  "keywords": ["tech", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "43",
+    "competition": "7",
+    "opportunity": "12"
+  }
+}

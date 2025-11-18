@@ -1,0 +1,22 @@
+{
+  "id": "27",
+  "name": "Micro Trend 27",
+  "category": "Gaming",
+  "description": "Emerging Gaming trend showing 39% growth in recent months",
+  "growthRate": 39,
+  "searchVolume": 16823,
+  "trendScore": 83,
+  "dateIdentified": "2024-01-17",
+  "region": "Global",
+  "keywords": ["gaming", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "53",
+    "competition": "92",
+    "opportunity": "64"
+  }
+}

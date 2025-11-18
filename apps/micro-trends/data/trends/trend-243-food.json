@@ -1,0 +1,22 @@
+{
+  "id": "243",
+  "name": "Micro Trend 243",
+  "category": "Food & Beverage",
+  "description": "Emerging Food & Beverage trend showing 22% growth in recent months",
+  "growthRate": 22,
+  "searchVolume": 5829,
+  "trendScore": 65,
+  "dateIdentified": "2024-01-13",
+  "region": "Global",
+  "keywords": ["food", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "89",
+    "competition": "85",
+    "opportunity": "33"
+  }
+}

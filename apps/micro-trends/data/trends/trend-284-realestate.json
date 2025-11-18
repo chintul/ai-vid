@@ -1,0 +1,22 @@
+{
+  "id": "284",
+  "name": "Micro Trend 284",
+  "category": "Real Estate",
+  "description": "Emerging Real Estate trend showing 43% growth in recent months",
+  "growthRate": 43,
+  "searchVolume": 26295,
+  "trendScore": 73,
+  "dateIdentified": "2024-01-14",
+  "region": "Global",
+  "keywords": ["realestate", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "75",
+    "competition": "90",
+    "opportunity": "46"
+  }
+}

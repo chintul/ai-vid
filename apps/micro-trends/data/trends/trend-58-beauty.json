@@ -1,0 +1,22 @@
+{
+  "id": "58",
+  "name": "Micro Trend 58",
+  "category": "Beauty & Personal Care",
+  "description": "Emerging Beauty & Personal Care trend showing 68% growth in recent months",
+  "growthRate": 68,
+  "searchVolume": 27135,
+  "trendScore": 63,
+  "dateIdentified": "2024-01-28",
+  "region": "Global",
+  "keywords": ["beauty", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "40",
+    "competition": "52",
+    "opportunity": "20"
+  }
+}

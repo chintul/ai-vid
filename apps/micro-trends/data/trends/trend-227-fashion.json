@@ -1,0 +1,22 @@
+{
+  "id": "227",
+  "name": "Micro Trend 227",
+  "category": "Fashion",
+  "description": "Emerging Fashion trend showing 118% growth in recent months",
+  "growthRate": 118,
+  "searchVolume": 24957,
+  "trendScore": 96,
+  "dateIdentified": "2024-01-17",
+  "region": "Global",
+  "keywords": ["fashion", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "18",
+    "competition": "24",
+    "opportunity": "57"
+  }
+}

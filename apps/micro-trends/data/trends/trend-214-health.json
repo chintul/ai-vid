@@ -1,0 +1,22 @@
+{
+  "id": "214",
+  "name": "Micro Trend 214",
+  "category": "Health & Wellness",
+  "description": "Emerging Health & Wellness trend showing 61% growth in recent months",
+  "growthRate": 61,
+  "searchVolume": 6844,
+  "trendScore": 68,
+  "dateIdentified": "2024-01-24",
+  "region": "Global",
+  "keywords": ["health", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "75",
+    "competition": "76",
+    "opportunity": "36"
+  }
+}

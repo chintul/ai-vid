@@ -1,0 +1,22 @@
+{
+  "id": "21",
+  "name": "Micro Trend 21",
+  "category": "Business",
+  "description": "Emerging Business trend showing 35% growth in recent months",
+  "growthRate": 35,
+  "searchVolume": 4303,
+  "trendScore": 82,
+  "dateIdentified": "2024-01-11",
+  "region": "Global",
+  "keywords": ["business", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "23",
+    "competition": "44",
+    "opportunity": "53"
+  }
+}

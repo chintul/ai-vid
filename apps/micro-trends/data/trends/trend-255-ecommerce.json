@@ -1,0 +1,22 @@
+{
+  "id": "255",
+  "name": "Micro Trend 255",
+  "category": "E-commerce",
+  "description": "Emerging E-commerce trend showing 189% growth in recent months",
+  "growthRate": 189,
+  "searchVolume": 21809,
+  "trendScore": 80,
+  "dateIdentified": "2024-01-25",
+  "region": "Global",
+  "keywords": ["ecommerce", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "51",
+    "competition": "87",
+    "opportunity": "0"
+  }
+}

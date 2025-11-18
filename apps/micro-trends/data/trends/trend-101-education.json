@@ -1,0 +1,22 @@
+{
+  "id": "101",
+  "name": "Micro Trend 101",
+  "category": "Education",
+  "description": "Emerging Education trend showing 138% growth in recent months",
+  "growthRate": 138,
+  "searchVolume": 24888,
+  "trendScore": 81,
+  "dateIdentified": "2024-01-11",
+  "region": "Global",
+  "keywords": ["education", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "74",
+    "competition": "36",
+    "opportunity": "29"
+  }
+}

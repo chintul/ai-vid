@@ -1,0 +1,22 @@
+{
+  "id": "8",
+  "name": "Micro Trend 8",
+  "category": "Sustainability",
+  "description": "Emerging Sustainability trend showing 68% growth in recent months",
+  "growthRate": 68,
+  "searchVolume": 22101,
+  "trendScore": 64,
+  "dateIdentified": "2024-01-18",
+  "region": "Global",
+  "keywords": ["sustainability", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "80",
+    "competition": "65",
+    "opportunity": "59"
+  }
+}

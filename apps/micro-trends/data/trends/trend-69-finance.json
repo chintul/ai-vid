@@ -1,0 +1,22 @@
+{
+  "id": "69",
+  "name": "Micro Trend 69",
+  "category": "Finance",
+  "description": "Emerging Finance trend showing 149% growth in recent months",
+  "growthRate": 149,
+  "searchVolume": 14592,
+  "trendScore": 91,
+  "dateIdentified": "2024-01-19",
+  "region": "Global",
+  "keywords": ["finance", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "67",
+    "competition": "64",
+    "opportunity": "4"
+  }
+}

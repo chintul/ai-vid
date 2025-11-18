@@ -1,0 +1,22 @@
+{
+  "id": "91",
+  "name": "Micro Trend 91",
+  "category": "Technology",
+  "description": "Emerging Technology trend showing 29% growth in recent months",
+  "growthRate": 29,
+  "searchVolume": 5767,
+  "trendScore": 75,
+  "dateIdentified": "2024-01-21",
+  "region": "Global",
+  "keywords": ["tech", "trending", "emerging", "micro-trend"],
+  "sources": [
+    "Google Trends",
+    "Social Media Analytics", 
+    "Market Research"
+  ],
+  "metrics": {
+    "momentum": "95",
+    "competition": "58",
+    "opportunity": "15"
+  }
+}
