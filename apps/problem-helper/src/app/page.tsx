@@ -3,7 +3,7 @@ import Link from "next/link";
 import { problemDatabase } from "@/lib/problem-database";
 
 export default function HomePage() {
-  const recentProblems = problemDatabase.slice(0, 6);
+  const recentProblems = problemDatabase;
 
   return (
     <main className="min-h-screen py-12">

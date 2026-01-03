@@ -5,7 +5,7 @@ import { glossaryTerms, getAllCategories, getRandomTerm } from "@/lib/glossary-d
 export default function HomePage() {
   const categories = getAllCategories();
   const randomTerm = getRandomTerm();
-  const featuredTerms = glossaryTerms.slice(0, 6);
+  const featuredTerms = glossaryTerms;
 
   return (
     <main className="min-h-screen py-12">

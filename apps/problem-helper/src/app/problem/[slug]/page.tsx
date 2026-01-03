@@ -40,8 +40,26 @@ export default function ProblemPage({ params }: ProblemPageProps) {
     notFound();
   }
 
+  // Structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": problem.title,
+    "description": problem.description,
+    "step": problem.steps.map((step, index) => ({
+      "@type": "HowToStep",
+      "position": index + 1,
+      "name": `Step ${index + 1}`,
+      "text": step,
+    })),
+  };
+
   return (
     <main className="min-h-screen py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Container maxWidth="lg">
         <div className="mb-6">
           <Link href="/" className="text-blue-600 hover:underline">
@@ -77,7 +95,7 @@ export default function ProblemPage({ params }: ProblemPageProps) {
           </Card>
 
           {problem.tips && problem.tips.length > 0 && (
-            <Card className="mb-8 border-blue-200 bg-blue-50">
+            <Card className="mb-8 border-blue-200 bg-blue-500">
               <CardContent className="p-6">
                 <h2 className="text-xl font-bold mb-4 text-blue-900">💡 Pro Tips</h2>
                 <ul className="space-y-2">

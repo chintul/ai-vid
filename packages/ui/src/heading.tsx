@@ -13,9 +13,9 @@ const headingVariants = cva("font-bold tracking-tight", {
       6: "text-base sm:text-lg md:text-xl",
     },
     color: {
-      default: "text-slate-900",
-      muted: "text-slate-600",
-      primary: "text-blue-600",
+      default: "text-foreground",
+      muted: "text-muted-foreground",
+      primary: "text-primary",
     },
   },
   defaultVariants: {
@@ -25,8 +25,8 @@ const headingVariants = cva("font-bold tracking-tight", {
 });
 
 export interface HeadingProps
-  extends React.HTMLAttributes<HTMLHeadingElement>,
-    VariantProps<typeof headingVariants> {
+  extends Omit<React.HTMLAttributes<HTMLHeadingElement>, "color">,
+  VariantProps<typeof headingVariants> {
   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 

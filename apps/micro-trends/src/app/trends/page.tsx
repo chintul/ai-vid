@@ -9,7 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default function AllTrendsPage() {
-  const sortedTrends = [...trends].sort((a, b) => a.title.localeCompare(b.title));
+  const sortedTrends = [...trends].sort((a, b) =>
+    (a.title || "").localeCompare(b.title || "")
+  );
 
   return (
     <main className="min-h-screen bg-slate-50 py-12">
@@ -40,8 +42,8 @@ export default function AllTrendsPage() {
                         trend.growthRate === "emerging"
                           ? "success"
                           : trend.growthRate === "rising"
-                          ? "default"
-                          : "secondary"
+                            ? "default"
+                            : "secondary"
                       }
                       className="text-xs"
                     >

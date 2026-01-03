@@ -40,6 +40,18 @@ export default function TrendPage({ params }: TrendPageProps) {
     notFound();
   }
 
+  // Structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": trend.title,
+    "description": trend.description,
+    "articleSection": trend.category,
+    "keywords": trend.tags.join(", "),
+    "datePublished": trend.dateIdentified || trend.lastUpdated,
+    "dateModified": trend.lastUpdated,
+  };
+
   const growthRateColors = {
     emerging: "bg-emerald-100 text-emerald-800 border-emerald-300",
     rising: "bg-blue-100 text-blue-800 border-blue-300",
@@ -54,6 +66,10 @@ export default function TrendPage({ params }: TrendPageProps) {
 
   return (
     <main className="min-h-screen bg-slate-50 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Container maxWidth="lg">
         <div className="mb-6">
           <Link href="/" className="text-blue-600 hover:underline font-semibold">

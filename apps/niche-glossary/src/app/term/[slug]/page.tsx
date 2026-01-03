@@ -40,8 +40,21 @@ export default function TermPage({ params }: TermPageProps) {
     notFound();
   }
 
+  // Structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "name": term.term,
+    "description": term.definition,
+    "inDefinedTermSet": term.category,
+  };
+
   return (
     <main className="min-h-screen py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Container maxWidth="lg">
         <div className="mb-6">
           <Link href="/" className="text-blue-600 hover:underline">
