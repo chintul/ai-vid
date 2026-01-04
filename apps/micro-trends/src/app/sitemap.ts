@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { trends, getAllCategories } from "@/lib/trends-database";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://microtrends.watch";
+  const baseUrl = "https://micro-trends.vercel.app";
 
   const trendUrls = trends.map((trend) => ({
     url: `${baseUrl}/trend/${trend.slug}`,
@@ -19,6 +19,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const staticPages = [
+    {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/categories`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+  ];
+
   return [
     {
       url: baseUrl,
@@ -32,6 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.9,
     },
+    ...staticPages,
     ...categoryUrls,
     ...trendUrls,
   ];

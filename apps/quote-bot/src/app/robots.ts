@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://quotebot.world/sitemap.xml",
+    sitemap: "https://quotezzz.vercel.app/sitemap.xml",
   };
 }

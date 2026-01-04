@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { Container, Heading, Card, CardContent, Badge } from "@passive-income/ui";
-import { generateMetadata as genMeta } from "@passive-income/seo";
+import { generateMetadata as genMeta, generateHowToSchema } from "@passive-income/seo";
 import { getProblemBySlug, problemDatabase } from "@/lib/problem-database";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -25,11 +25,17 @@ export async function generateMetadata({ params }: ProblemPageProps): Promise<Me
   }
 
   return genMeta({
-    title: `${problem.title} | Problem Helper`,
+    title: problem.title,
     description: problem.description,
     keywords: problem.keywords,
-    url: `https://problemhelper.ai/problem/${problem.slug}`,
+    url: `https://problem-helper.vercel.app/problem/${problem.slug}`,
     type: "article",
+    image: {
+      url: "/og-image.png",
+      width: 1200,
+      height: 630,
+      alt: problem.title,
+    },
   });
 }
 
@@ -41,18 +47,11 @@ export default function ProblemPage({ params }: ProblemPageProps) {
   }
 
   // Structured data for SEO
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": problem.title,
-    "description": problem.description,
-    "step": problem.steps.map((step, index) => ({
-      "@type": "HowToStep",
-      "position": index + 1,
-      "name": `Step ${index + 1}`,
-      "text": step,
-    })),
-  };
+  const structuredData = generateHowToSchema({
+    title: problem.title,
+    description: problem.description,
+    steps: problem.steps.map((step) => ({ text: step })),
+  });
 
   return (
     <main className="min-h-screen py-12">

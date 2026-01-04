@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://nicheglossary.com/sitemap.xml",
+    sitemap: "https://niche-glossary.vercel.app/sitemap.xml",
   };
 }

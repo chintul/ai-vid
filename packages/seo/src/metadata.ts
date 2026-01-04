@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 
+export interface SEOImageConfig {
+  url: string;
+  width?: number;
+  height?: number;
+  alt?: string;
+}
+
 export interface SEOConfig {
   title: string;
   description: string;
   keywords?: string[];
-  image?: string;
+  image?: string | SEOImageConfig;
   url?: string;
   siteName?: string;
   locale?: string;
@@ -32,6 +39,14 @@ export function generateMetadata(config: SEOConfig): Metadata {
     modifiedTime,
   } = config;
 
+  // Handle image parameter - can be string or object with dimensions
+  const imageUrl = typeof image === "string" ? image : image?.url;
+  const imageData = typeof image === "string"
+    ? { url: image, alt: title }
+    : image
+      ? { url: image.url, width: image.width, height: image.height, alt: image.alt || title }
+      : undefined;
+
   const metadata: Metadata = {
     title,
     description,
@@ -44,7 +59,7 @@ export function generateMetadata(config: SEOConfig): Metadata {
       siteName,
       locale,
       type,
-      images: image ? [{ url: image, alt: title }] : undefined,
+      images: imageData ? [imageData] : undefined,
       publishedTime,
       modifiedTime,
     },
@@ -52,7 +67,7 @@ export function generateMetadata(config: SEOConfig): Metadata {
       card: "summary_large_image",
       title,
       description,
-      images: image ? [image] : undefined,
+      images: imageUrl ? [imageUrl] : undefined,
       creator: author ? `@${author.replace(/\s/g, "")}` : undefined,
     },
     alternates: {

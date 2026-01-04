@@ -2,18 +2,26 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { generateSiteMetadata } from "@passive-income/seo";
+import { GoogleAnalytics } from "@passive-income/analytics";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = generateSiteMetadata({
-  siteName: "Niche Glossary - Industry Terms Explained",
-  siteUrl: "https://nicheglossary.com",
-  description:
-    "Comprehensive glossary of niche industry terms. From goat farming to metal forging, balloon decorating to industrial cleaning. Clear definitions and practical examples.",
-  defaultImage: "/og-image.png",
-});
+export const metadata: Metadata = {
+  metadataBase: new URL("https://niche-glossary.vercel.app"),
+  title: {
+    template: "%s | Niche Glossary",
+    default: "Niche Glossary - Industry Terms Explained",
+  },
+  ...generateSiteMetadata({
+    siteName: "Niche Glossary - Industry Terms Explained",
+    siteUrl: "https://niche-glossary.vercel.app",
+    description:
+      "Comprehensive glossary of niche industry terms. From goat farming to metal forging, balloon decorating to industrial cleaning. Clear definitions and practical examples.",
+    defaultImage: "/og-image.png",
+  }),
+};
 
 export default function RootLayout({
   children,
@@ -23,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
         <header className="sticky top-0 z-50 border-b backdrop-blur-sm" style={{ borderColor: 'var(--border-color)', background: 'rgba(var(--background-rgb, 255, 255, 255), 0.8)' }}>
           <div className="container-custom">
             <div className="flex items-center justify-between h-16">

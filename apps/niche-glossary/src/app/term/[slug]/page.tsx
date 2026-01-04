@@ -25,11 +25,17 @@ export async function generateMetadata({ params }: TermPageProps): Promise<Metad
   }
 
   return genMeta({
-    title: `${term.term} - ${term.category} | Niche Glossary`,
+    title: `${term.term} - ${term.category}`,
     description: term.definition,
     keywords: [term.term, term.category, ...term.relatedTerms],
-    url: `https://nicheglossary.com/term/${term.slug}`,
+    url: `https://niche-glossary.vercel.app/term/${term.slug}`,
     type: "article",
+    image: {
+      url: "/og-image.png",
+      width: 1200,
+      height: 630,
+      alt: term.term,
+    },
   });
 }
 
@@ -40,13 +46,17 @@ export default function TermPage({ params }: TermPageProps) {
     notFound();
   }
 
-  // Structured data for SEO
+  // Structured data for SEO - DefinedTerm is perfect for glossary terms
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "DefinedTerm",
     "name": term.term,
     "description": term.definition,
-    "inDefinedTermSet": term.category,
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": `${term.category} Glossary`,
+    },
+    "url": `https://niche-glossary.vercel.app/term/${term.slug}`,
   };
 
   return (

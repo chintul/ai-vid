@@ -26,9 +26,29 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     return {};
   }
 
+  const topTags = trends
+    .flatMap((t) => t.tags)
+    .slice(0, 10)
+    .join(", ");
+
   return {
-    title: `${categoryName} | MicroTrends`,
-    description: `Explore ${trends.length} microtrends in ${categoryName}.`,
+    title: `${categoryName} MicroTrends`,
+    description: `Discover ${trends.length} emerging microtrends in ${categoryName}. Stay ahead of market shifts with data-driven insights across ${categoryName.toLowerCase()} innovations and trends.`,
+    keywords: [categoryName, "microtrends", "emerging trends", topTags],
+    openGraph: {
+      title: `${categoryName} MicroTrends`,
+      description: `Explore ${trends.length} emerging trends in ${categoryName}`,
+      url: `https://micro-trends.vercel.app/category/${params.category}`,
+      type: "website",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${categoryName} MicroTrends`,
+        },
+      ],
+    },
   };
 }
 

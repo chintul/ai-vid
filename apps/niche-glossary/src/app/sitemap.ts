@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { glossaryTerms, getAllCategories } from "@/lib/glossary-database";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://nicheglossary.com";
+  const baseUrl = "https://niche-glossary.vercel.app";
 
   const termUrls = glossaryTerms.map((term) => ({
     url: `${baseUrl}/term/${term.slug}`,
@@ -19,6 +19,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const staticPages = [
+    {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms-of-service`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/categories`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+  ];
+
   return [
     {
       url: baseUrl,
@@ -32,6 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    ...staticPages,
     ...categoryUrls,
     ...termUrls,
   ];

@@ -2,18 +2,26 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { generateSiteMetadata } from "@passive-income/seo";
+import { GoogleAnalytics } from "@passive-income/analytics";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = generateSiteMetadata({
-  siteName: "Problem Helper - Step-by-Step Solutions",
-  siteUrl: "https://problemhelper.ai",
-  description:
-    "Get instant, step-by-step solutions to everyday micro-problems. From heating costs to router issues, find clear answers fast.",
-  defaultImage: "/og-image.png",
-});
+export const metadata: Metadata = {
+  metadataBase: new URL("https://problem-helper.vercel.app"),
+  title: {
+    template: "%s | Problem Helper",
+    default: "Problem Helper - Step-by-Step Solutions",
+  },
+  ...generateSiteMetadata({
+    siteName: "Problem Helper - Step-by-Step Solutions",
+    siteUrl: "https://problem-helper.vercel.app",
+    description:
+      "Get instant, step-by-step solutions to everyday micro-problems. From heating costs to router issues, find clear answers fast.",
+    defaultImage: "/og-image.png",
+  }),
+};
 
 export default function RootLayout({
   children,
@@ -23,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
         <header className="sticky top-0 z-50 border-b backdrop-blur-sm" style={{ borderColor: 'var(--border-color)', background: 'rgba(var(--background-rgb, 255, 255, 255), 0.8)' }}>
           <div className="container-custom">
             <div className="flex items-center justify-between h-16">

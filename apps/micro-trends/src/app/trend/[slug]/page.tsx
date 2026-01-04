@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { Container, Heading, Card, CardContent, Badge } from "@passive-income/ui";
-import { generateMetadata as genMeta } from "@passive-income/seo";
+import { generateMetadata as genMeta, generateArticleSchema } from "@passive-income/seo";
 import { getTrendBySlug, trends } from "@/lib/trends-database";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -25,11 +25,17 @@ export async function generateMetadata({ params }: TrendPageProps): Promise<Meta
   }
 
   return genMeta({
-    title: `${trend.title} - ${trend.category} | MicroTrends`,
+    title: `${trend.title} - ${trend.category}`,
     description: trend.description,
     keywords: [...trend.tags, trend.category, "microtrend"],
-    url: `https://microtrends.watch/trend/${trend.slug}`,
+    url: `https://micro-trends.vercel.app/trend/${trend.slug}`,
     type: "article",
+    image: {
+      url: "/og-image.png",
+      width: 1200,
+      height: 630,
+      alt: trend.title,
+    },
   });
 }
 
@@ -41,16 +47,16 @@ export default function TrendPage({ params }: TrendPageProps) {
   }
 
   // Structured data for SEO
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": trend.title,
-    "description": trend.description,
-    "articleSection": trend.category,
-    "keywords": trend.tags.join(", "),
-    "datePublished": trend.dateIdentified || trend.lastUpdated,
-    "dateModified": trend.lastUpdated,
-  };
+  const structuredData = generateArticleSchema({
+    title: trend.title,
+    description: trend.description,
+    publishedDate: trend.dateIdentified || trend.lastUpdated,
+    modifiedDate: trend.lastUpdated,
+    url: `https://micro-trends.vercel.app/trend/${trend.slug}`,
+    image: "https://micro-trends.vercel.app/og-image.png",
+    publisherName: "MicroTrends",
+    publisherLogo: "https://micro-trends.vercel.app/logo.png",
+  });
 
   const growthRateColors = {
     emerging: "bg-emerald-100 text-emerald-800 border-emerald-300",

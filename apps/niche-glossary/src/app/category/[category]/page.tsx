@@ -26,9 +26,29 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     return {};
   }
 
+  const relatedTermsList = terms
+    .flatMap((t) => t.relatedTerms)
+    .slice(0, 10)
+    .join(", ");
+
   return {
-    title: `${categoryName} Terms | Niche Glossary`,
-    description: `Browse ${terms.length} specialized terms and definitions for ${categoryName}.`,
+    title: `${categoryName} Terms & Definitions`,
+    description: `Browse ${terms.length} specialized ${categoryName.toLowerCase()} terms with clear definitions, use cases, and examples. Professional glossary for ${categoryName.toLowerCase()} industry terminology.`,
+    keywords: [categoryName, "glossary", "definitions", "terminology", relatedTermsList],
+    openGraph: {
+      title: `${categoryName} Terms & Definitions`,
+      description: `${terms.length} professional ${categoryName.toLowerCase()} terms explained`,
+      url: `https://niche-glossary.vercel.app/category/${params.category}`,
+      type: "website",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${categoryName} Glossary`,
+        },
+      ],
+    },
   };
 }
 

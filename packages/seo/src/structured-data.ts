@@ -15,12 +15,21 @@ export interface ArticleSchema extends StructuredData {
   headline: string;
   description: string;
   author: {
-    "@type": "Person";
+    "@type": "Person" | "Organization";
     name: string;
+  };
+  publisher?: {
+    "@type": "Organization";
+    name: string;
+    logo?: {
+      "@type": "ImageObject";
+      url: string;
+    };
   };
   datePublished: string;
   dateModified?: string;
-  image?: string;
+  image?: string | string[];
+  url?: string;
 }
 
 /**
@@ -79,31 +88,69 @@ export interface FAQSchema extends StructuredData {
 }
 
 /**
+ * HowTo schema
+ */
+export interface HowToSchema extends StructuredData {
+  "@type": "HowTo";
+  name: string;
+  description: string;
+  step: Array<{
+    "@type": "HowToStep";
+    position: number;
+    name: string;
+    text: string;
+  }>;
+  totalTime?: string;
+  estimatedCost?: {
+    "@type": "MonetaryAmount";
+    currency: string;
+    value: number;
+  };
+}
+
+/**
  * Generates Article structured data
  */
 export function generateArticleSchema(config: {
   title: string;
   description: string;
-  author: string;
+  author?: string;
   publishedDate: string;
   modifiedDate?: string;
-  image?: string;
+  image?: string | string[];
   url?: string;
+  publisherName?: string;
+  publisherLogo?: string;
 }): ArticleSchema {
-  return {
+  const schema: ArticleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: config.title,
     description: config.description,
     author: {
-      "@type": "Person",
-      name: config.author,
+      "@type": config.author ? "Person" : "Organization",
+      name: config.author || config.publisherName || "Anonymous",
     },
     datePublished: config.publishedDate,
     dateModified: config.modifiedDate || config.publishedDate,
     image: config.image,
     url: config.url,
   };
+
+  if (config.publisherName) {
+    schema.publisher = {
+      "@type": "Organization",
+      name: config.publisherName,
+      logo: config.publisherLogo
+        ? {
+            "@type": "ImageObject",
+            url: config.publisherLogo,
+          }
+        : undefined,
+    };
+  }
+
+  return schema;
 }
 
 /**
@@ -190,6 +237,32 @@ export function generateFAQSchema(
         text: faq.answer,
       },
     })),
+  };
+}
+
+/**
+ * Generates HowTo structured data
+ */
+export function generateHowToSchema(config: {
+  title: string;
+  description: string;
+  steps: Array<{ name?: string; text: string }>;
+  totalTime?: string;
+  estimatedCost?: { currency: string; value: number };
+}): HowToSchema {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: config.title,
+    description: config.description,
+    step: config.steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name || `Step ${index + 1}`,
+      text: step.text,
+    })),
+    totalTime: config.totalTime,
+    estimatedCost: config.estimatedCost,
   };
 }
 

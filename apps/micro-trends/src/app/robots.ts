@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://microtrends.watch/sitemap.xml",
+    sitemap: "https://micro-trends.vercel.app/sitemap.xml",
   };
 }
