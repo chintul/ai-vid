@@ -15,30 +15,13 @@ declare global {
 export type GAMeasurementId = `G-${string}` | `UA-${string}`;
 
 /**
- * Initializes Google Analytics
- */
-export function initGA(measurementId: GAMeasurementId): void {
-  if (typeof window === "undefined") return;
-
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag() {
-    window.dataLayer?.push(arguments);
-  };
-  window.gtag("js", new Date());
-  window.gtag("config", measurementId, {
-    page_path: window.location.pathname,
-  });
-}
-
-/**
  * Tracks a page view in Google Analytics
  */
-export function trackPageView(url: string, title?: string): void {
+export function trackPageView(url: string): void {
   if (typeof window === "undefined" || !window.gtag) return;
 
   window.gtag("event", "page_view", {
     page_path: url,
-    page_title: title || document.title,
   });
 }
 

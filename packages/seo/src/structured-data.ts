@@ -143,9 +143,9 @@ export function generateArticleSchema(config: {
       name: config.publisherName,
       logo: config.publisherLogo
         ? {
-            "@type": "ImageObject",
-            url: config.publisherLogo,
-          }
+          "@type": "ImageObject",
+          url: config.publisherLogo,
+        }
         : undefined,
     };
   }
@@ -262,7 +262,6 @@ export function generateHowToSchema(config: {
       text: step.text,
     })),
     totalTime: config.totalTime,
-    estimatedCost: config.estimatedCost,
   };
 }
 

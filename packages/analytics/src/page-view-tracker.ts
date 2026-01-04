@@ -13,13 +13,12 @@ export class PageViewTracker {
   /**
    * Tracks the current page view
    */
-  track(url?: string, title?: string): void {
+  track(url?: string): void {
     if (!this.enabled || typeof window === "undefined") return;
 
     const currentUrl = url || window.location.pathname + window.location.search;
-    const pageTitle = title || document.title;
 
-    trackPageView(currentUrl, pageTitle);
+    trackPageView(currentUrl);
   }
 
   /**
